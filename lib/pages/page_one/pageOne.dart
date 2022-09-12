@@ -1,3 +1,4 @@
+import 'package:card_2/utils/currency_formater.dart';
 import 'package:flutter/material.dart';
 
 class PageOne extends StatefulWidget {
@@ -58,7 +59,7 @@ class _PageOneState extends State<PageOne> {
                             borderRadius: BorderRadius.circular(10)),
                       )
                     : Text(
-                        "R\$ ${sumTotal()}",
+                        realMoney.format(balanceTotal),
                         style: const TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 40),
                       ),
@@ -95,7 +96,7 @@ class _PageOneState extends State<PageOne> {
                                   color: Colors.grey,
                                   borderRadius: BorderRadius.circular(5)),
                             )
-                          : Text("R\$ $balanceEth"),
+                          : Text(realMoney.format(balanceEth)),
                       const SizedBox(
                         height: 5,
                       ),
@@ -134,7 +135,7 @@ class _PageOneState extends State<PageOne> {
                                   color: Colors.grey,
                                   borderRadius: BorderRadius.circular(5)),
                             )
-                          : Text("R\$ $balanceBtc"),
+                          : Text(realMoney.format(balanceBtc)),
                       const SizedBox(
                         height: 5,
                       ),
@@ -173,7 +174,7 @@ class _PageOneState extends State<PageOne> {
                                   color: Colors.grey,
                                   borderRadius: BorderRadius.circular(5)),
                             )
-                          : Text("R\$ $balanceLtc"),
+                          : Text(realMoney.format(balanceLtc)),
                       const SizedBox(
                         height: 5,
                       ),
