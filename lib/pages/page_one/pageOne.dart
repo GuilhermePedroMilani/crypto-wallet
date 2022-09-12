@@ -10,7 +10,7 @@ class PageOne extends StatefulWidget {
 class _PageOneState extends State<PageOne> {
   bool showMoney = true;
   double balanceBtc = 1;
-  double balanceEth=4;
+  double balanceEth=7;
   double balanceLtc=3;
   double balanceTotal = 0;
   double sumTotal() {
