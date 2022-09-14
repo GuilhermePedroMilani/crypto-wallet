@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../widgets/bottom_navigation_warren.dart';
 import '../widgets/crypto_info.dart';
 import '../widgets/wallet_infos.dart';
 
@@ -28,23 +26,18 @@ class _PageWalletState extends State<PageWallet> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             const WalletInfos(),
-
             CryptoInfo(
-              
               balance: balanceEth,
               initialsCoin: "ETH",
               nameCoin: "Ethereum",
             ),
             CryptoInfo(
-              
               balance: balanceBtc,
               initialsCoin: "BTC",
               nameCoin: "Bitcoin",
             ),
             CryptoInfo(
-             
               balance: balanceLtc,
               initialsCoin: "LTC",
               nameCoin: "Litecoin",
@@ -52,8 +45,6 @@ class _PageWalletState extends State<PageWallet> {
           ],
         ),
       ),
-      bottomNavigationBar: const BottomNavigationWarren(),
     );
   }
 }
-

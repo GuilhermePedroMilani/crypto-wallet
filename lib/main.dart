@@ -1,4 +1,4 @@
-import 'package:card_2/pageWallet/view/page_wallet.dart';
+import 'package:card_2/pagesNavigation/view/pages.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       useInheritedMediaQuery: true,
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: PageWallet(),
+      home: PagesNavigation(),
     );
   }
 }
