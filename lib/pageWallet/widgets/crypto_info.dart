@@ -56,7 +56,7 @@ class _CryptoInfoState extends ConsumerState<CryptoInfo> {
               Text(widget.nameCoin),
               const Spacer(),
               Text(
-                "0.032 ${widget.initialsCoin}",
+                "0.037 ${widget.initialsCoin}",
                 style: const TextStyle(color: Colors.grey),
               ),
             ],
