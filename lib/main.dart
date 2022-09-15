@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'pageNavigator/page_navigator.dart';
+import 'navigator_bar/navigatorBar.dart';
 
 void main() {
   runApp(
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       useInheritedMediaQuery: true,
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: PageNavigator(),
+      home: NavigatorBar(),
     );
   }
 }

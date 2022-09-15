@@ -7,6 +7,7 @@ final showMoneyProvider = StateProvider(
   (ref) => false,
 );
 
+
 class WalletInfos extends StatefulHookConsumerWidget {
   const WalletInfos({
     Key? key,
