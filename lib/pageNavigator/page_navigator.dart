@@ -2,16 +2,16 @@ import 'package:card_2/pageMovements/view/page_movements.dart';
 import 'package:card_2/pageWallet/view/page_wallet.dart';
 import 'package:flutter/material.dart';
 
-class PagesNavigation extends StatefulWidget {
-  const PagesNavigation({
+class PageNavigator extends StatefulWidget {
+  const PageNavigator({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<PagesNavigation> createState() => _BottomNavigationWarrenState();
+  State<PageNavigator> createState() => _BottomNavigationWarrenState();
 }
 
-class _BottomNavigationWarrenState extends State<PagesNavigation> {
+class _BottomNavigationWarrenState extends State<PageNavigator> {
   int opcaoSelecionado = 0;
   @override
   Widget build(BuildContext context) {
