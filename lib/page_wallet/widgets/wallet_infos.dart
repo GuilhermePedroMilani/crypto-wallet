@@ -7,6 +7,7 @@ final showMoneyProvider = StateProvider(
   (ref) => false,
 );
 
+
 class WalletInfos extends StatefulHookConsumerWidget {
   const WalletInfos({
     Key? key,
@@ -59,7 +60,7 @@ class _WalletInfosState extends ConsumerState<WalletInfos> {
                   ),
                 )
               : Text(
-                  realMoney.format(1),
+                  realMoney.format(11),
                   style: const TextStyle(
                       fontWeight: FontWeight.bold, fontSize: 40),
                 ),

@@ -14,7 +14,7 @@ class _PageMovementsState extends State<PageMovements> {
       appBar: AppBar(
         title: const Text('teste'),
       ),
-      body: const Center(child: Text("Mudou de tela receba")),
+      body: const Center(child: Text("Mudou de tela")),
     );
   }
 }

@@ -1,8 +1,9 @@
-import 'package:card_2/pageWallet/widgets/wallet_infos.dart';
+import 'package:card_2/page_wallet/widgets/wallet_infos.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../shared/utils/currency_formater.dart';
+final valueCrypto = StateProvider((ref) => double,);
 
 class CryptoInfo extends StatefulHookConsumerWidget {
   CryptoInfo({
@@ -56,7 +57,7 @@ class _CryptoInfoState extends ConsumerState<CryptoInfo> {
               Text(widget.nameCoin),
               const Spacer(),
               Text(
-                "0.032 ${widget.initialsCoin}",
+                "0.037 ${widget.initialsCoin}",
                 style: const TextStyle(color: Colors.grey),
               ),
             ],

@@ -1,8 +1,9 @@
-import 'package:card_2/pagesNavigation/view/pages.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import 'navigator_bar/navigatorBar.dart';
 
 void main() {
   runApp(
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       useInheritedMediaQuery: true,
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: PagesNavigation(),
+      home: NavigatorBar(),
     );
   }
 }

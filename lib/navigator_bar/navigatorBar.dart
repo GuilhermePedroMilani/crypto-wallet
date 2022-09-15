@@ -1,17 +1,17 @@
-import 'package:card_2/pageMovements/view/page_movements.dart';
-import 'package:card_2/pageWallet/view/page_wallet.dart';
+import 'package:card_2/page_movements/view/page_movements.dart';
+import 'package:card_2/page_wallet/view/page_wallet.dart';
 import 'package:flutter/material.dart';
 
-class PagesNavigation extends StatefulWidget {
-  const PagesNavigation({
+class NavigatorBar extends StatefulWidget {
+  const NavigatorBar({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<PagesNavigation> createState() => _BottomNavigationWarrenState();
+  State<NavigatorBar> createState() => _BottomNavigationWarrenState();
 }
 
-class _BottomNavigationWarrenState extends State<PagesNavigation> {
+class _BottomNavigationWarrenState extends State<NavigatorBar> {
   int opcaoSelecionado = 0;
   @override
   Widget build(BuildContext context) {
