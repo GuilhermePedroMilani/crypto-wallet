@@ -1,11 +1,11 @@
-import 'package:card_2/page_wallet/widgets/wallet_infos.dart';
 import 'package:card_2/shared/model/crypto_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-
+import '../../page_details/controller/model_state_provider.dart';
 import '../../page_details/view/page_datails.dart';
 import '../../shared/utils/currency_formater.dart';
-import '../../shared/utils/sum_money.dart';
+import '../controller/show_money_state_provider.dart';
+import '../controller/total_money_provider.dart';
 
 class CryptoInfo extends StatefulHookConsumerWidget {
   const CryptoInfo({
@@ -28,7 +28,6 @@ class _CryptoInfoState extends ConsumerState<CryptoInfo> {
           ref.watch(totalMoneyProvider) == 0
               ? Future.delayed(Duration.zero).then((value) => ref
                   .read(totalMoneyProvider.notifier)
-
                   .state += assets[index].value)
               : DoNothingAction();
 
@@ -44,7 +43,7 @@ class _CryptoInfoState extends ConsumerState<CryptoInfo> {
                       builder: (context) => const PageDatails(),
                     ),
                   );
-                  model.state = assets[index];    
+                  model.state = assets[index];
                 },
                 leading: CircleAvatar(
                   radius: 25,

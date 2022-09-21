@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-
-final daysGrafProvider = StateProvider<int>(
-  (ref) => 5,
-);
+import '../controller/days_graf_state_provider.dart';
 
 class ButtonDays extends StatefulHookConsumerWidget {
   ButtonDays({
@@ -23,14 +20,15 @@ class _ButtonDaysState extends ConsumerState<ButtonDays> {
     return InkWell(
       onTap: () {
         daysGraf.state = widget.days;
-        
       },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
           padding: const EdgeInsets.all(4),
           decoration: BoxDecoration(
-              color: widget.days == daysGraf.state ? Colors.grey.shade300: Colors.white,
+              color: widget.days == daysGraf.state
+                  ? Colors.grey.shade300
+                  : Colors.white,
               borderRadius: BorderRadius.circular(5)),
           child: Text(
             "${widget.days} D",

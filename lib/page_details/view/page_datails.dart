@@ -1,25 +1,12 @@
-import 'package:card_2/shared/model/crypto_entity.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-
-import '../widgets/button_days.dart';
+import '../controller/days_graf_state_provider.dart';
+import '../controller/model_state_provider.dart';
 import '../widgets/cabecalho.dart';
 import '../widgets/column_infos.dart';
 import '../widgets/crypto_grafic.dart';
 import '../widgets/row_button_days.dart';
-
-final modelStateProvider = StateProvider(
-  (ref) => CryptoEntity(
-    name: '',
-    sigla: '',
-    picture: '',
-    valueActual: [0],
-    variation: 0,
-    quantity: 0,
-    value: 0,
-  ),
-);
 
 class PageDatails extends StatefulHookConsumerWidget {
   const PageDatails({Key? key}) : super(key: key);
