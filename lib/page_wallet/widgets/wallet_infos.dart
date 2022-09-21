@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-
 import '../../shared/utils/currency_formater.dart';
-
-final showMoneyProvider = StateProvider(
-  (ref) => false,
-);
-
+import '../controller/show_money_state_provider.dart';
+import '../controller/total_money_provider.dart';
 
 class WalletInfos extends StatefulHookConsumerWidget {
   const WalletInfos({
@@ -60,7 +56,7 @@ class _WalletInfosState extends ConsumerState<WalletInfos> {
                   ),
                 )
               : Text(
-                  realMoney.format(11),
+                  realMoney.format(ref.watch(totalMoneyProvider)),
                   style: const TextStyle(
                       fontWeight: FontWeight.bold, fontSize: 40),
                 ),

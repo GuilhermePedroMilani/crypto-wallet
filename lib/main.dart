@@ -19,11 +19,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       useInheritedMediaQuery: true,
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: NavigatorBar(),
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: Colors.black),
+          titleTextStyle: TextStyle(
+              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 23),
+          elevation: 1,
+        ),
+      ),
+      home: const NavigatorBar(),
     );
   }
 }
